@@ -1,0 +1,1059 @@
+@import url('https://fonts.googleapis.com/css2?family=Eastman+Grotesque:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Brand Colors */
+  --color-primary: #BEA925;
+  --color-accent: #D9C43D;
+  --color-neutral: #a6a6a6;
+
+  /* STIMÉO GOLD UNIFIED PALETTE */
+  --stimeo-gold: #B19E31 !important; /* Unified signature color */
+  --stimeo-maroon: #99554E !important; /* Partner/trust color */
+  --neutral-dark: #1F2937 !important;
+  --neutral-light: #F9FAFB !important;
+
+  /* Typography Colors */
+  --color-text-primary: #333333; /* Deep Anthracite for premium appearance and better contrast */
+  --color-text-secondary: #4a4a4a; /* Slightly deeper secondary for improved readability */
+  --color-text-light: #f5f5f5;
+
+  /* Background & Surfaces */
+  --color-background: #ffffff;
+  --color-surface: #f9f9f9;
+  --color-section-accent: #D9C43D;
+
+  /* Footer */
+  --color-footer-bg: #2a2a2a;
+  --color-footer-text: #e0e0e0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Eastman Grotesque', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  background: var(--color-background);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: overflow 0.3s ease;
+}
+
+/* Prevent scrolling when mobile menu is open */
+body.menu-open {
+  overflow: hidden;
+}
+
+/* Typography Hierarchy */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 800; /* Extra-Bold */
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  color: #2D2D2D; /* Deep Anthracite Gray for H1 */
+  font-size: 60px;
+  line-height: 68px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  color: #2D2D2D; /* Deep Anthracite Gray for H2 */
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+}
+
+h3 {
+  color: #444444; /* Soft Dark Gray for H3 */
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: 800;
+}
+
+h4 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+}
+
+h6 {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+small {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+strong {
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-text-primary);
+}
+
+/* Component Styles */
+@layer components {
+  .btn-primary {
+    @apply px-6 sm:px-10 py-3 sm:py-4 bg-brand-gold text-white font-bold text-base rounded-pill border-2 border-brand-gold;
+    @apply hover:opacity-90 hover:scale-105 transition-all duration-300 cursor-pointer;
+    @apply active:scale-95 active:opacity-80;
+    font-family: 'Eastman Grotesque', sans-serif;
+    touch-action: manipulation;
+  }
+
+  .btn-secondary {
+    @apply px-6 sm:px-10 py-3 sm:py-4 border-2 border-brand-anthracite text-brand-anthracite bg-transparent font-bold text-base rounded-pill;
+    @apply hover:bg-brand-anthracite hover:text-white transition-all duration-300 cursor-pointer;
+    @apply active:bg-brand-anthracite active:text-white active:scale-95;
+    font-family: 'Eastman Grotesque', sans-serif;
+    touch-action: manipulation;
+  }
+
+  .btn-outline {
+    @apply px-10 py-4 border-2 border-brand-neutral text-brand-neutral bg-transparent font-bold text-base rounded-pill;
+    @apply hover:bg-brand-neutral hover:text-white transition-all duration-300 cursor-pointer;
+    font-family: 'Eastman Grotesque', sans-serif;
+  }
+
+  .section-title {
+    @apply text-6xl font-extrabold text-brand-anthracite mb-8;
+  }
+
+  .section-subtitle {
+    @apply text-lg text-brand-anthracite font-normal;
+  }
+
+  .text-accent {
+    @apply text-brand-gold font-bold;
+  }
+}
+
+/* Spacing Utilities */
+.section-padding {
+  @apply py-24 px-6 md:px-12;
+}
+
+.container-width {
+  @apply max-w-7xl mx-auto;
+}
+
+/* Whitespace & Breathing Room */
+.spacer-lg {
+  @apply h-32;
+}
+
+.spacer-md {
+  @apply h-16;
+}
+
+/* Image Styling */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Form Elements */
+input,
+textarea,
+select {
+  font-family: 'Eastman Grotesque', sans-serif;
+  font-size: 16px;
+  border: 2px solid #e0e0e0;
+  padding: 12px 16px;
+  border-radius: 0;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+/* Magnetic Button Effect */
+[data-magnetic] {
+  transition: transform 0.15s ease-out;
+}
+
+/* ============================================
+   TITLE ANIMATION SYSTEM
+   ============================================ */
+
+/* Premium Fade-In Slide-Up Animation for H1 and H2 */
+h1, h2 {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+h1.title-animate,
+h2.title-animate {
+  animation: titleFadeInSlideUp 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes titleFadeInSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Liquid Highlight Animation with Sequential Delay */
+.liquid-highlight {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(90deg, #BEA925 0%, #D9C43D 50%, #BEA925 100%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 1;
+}
+
+/* Initial state: solid gold color until animation triggers */
+.liquid-highlight:not(.highlight-animate) {
+  -webkit-text-fill-color: #BEA925;
+  background: none;
+  opacity: 1;
+}
+
+/* Active animation: liquid highlight draws from left to right */
+.liquid-highlight.highlight-animate {
+  animation: liquidHighlightDraw 1.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards 0.4s;
+}
+
+@keyframes liquidHighlightDraw {
+  0% {
+    background-position: 100% 0;
+    opacity: 1;
+    -webkit-text-fill-color: transparent;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    background-position: 0% 0;
+    opacity: 1;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+/* Underline Expansion Animation - Base Styles */
+.title-underline,
+.carousel-title-underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(90deg, #BEA925, #D9C43D);
+  border-radius: 2px;
+  transition: width 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  width: 0%;
+  opacity: 0;
+}
+
+/* Domain card title underline - 3px height */
+.title-underline {
+  height: 3px;
+}
+
+/* Carousel title underline - 4px height */
+.carousel-title-underline {
+  height: 4px;
+}
+
+/* Underline expansion on hover or manual activation */
+.title-underline.underline-expand,
+.carousel-title-underline.underline-expand {
+  width: 100%;
+  opacity: 1;
+}
+
+/* Domain card title underline - expand on card hover */
+.domain-card:hover .title-underline {
+  width: 100%;
+  opacity: 1;
+}
+
+/* Carousel title underline animation on slide change */
+.carousel-title-underline.carousel-underline-animate {
+  animation: carouselUnderlineAppear 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes carouselUnderlineAppear {
+  from {
+    width: 0%;
+    opacity: 0;
+  }
+  to {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+/* Domain Card Scroll-Reveal Animation (Lift Effect) */
+.domain-card {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.domain-card.card-reveal {
+  animation: cardRevealLift 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes cardRevealLift {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Domain Card Title Color Change on Reveal */
+.domain-card h3 {
+  transition: color 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.domain-card.card-reveal h3 {
+  animation: titleColorReveal 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s forwards;
+}
+
+@keyframes titleColorReveal {
+  0% {
+    color: #3a3a3a; /* brand-anthracite */
+  }
+  100% {
+    color: #3a3a3a; /* Stays anthracite, hover will change it */
+  }
+}
+
+/* Engagement Cards Styling */
+.engagement-card {
+  border-left: 5px solid #BEA925;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: cardRevealLift 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Staggered animation for engagement cards */
+.engagement-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.engagement-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.engagement-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.engagement-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  h2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  h3 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .section-title {
+    @apply text-3xl;
+  }
+}
+
+/* Mobile Performance: Disable hover states on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .btn-primary:hover {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .btn-secondary:hover {
+    background-color: transparent;
+    color: inherit;
+  }
+
+  .domain-card:hover {
+    transform: scale(1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.06);
+  }
+
+  .domain-card:hover h3 {
+    color: inherit;
+  }
+
+  .carousel-card:hover {
+    transform: scale(1);
+  }
+
+  .engagement-card:hover {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* ============================================
+   DUAL PALETTE: VITALIA (Bordeaux) & STIMÉO (Gold)
+   ============================================ */
+
+/* --- VITALIA IDENTITY (Unified STIMÉO Gold) --- */
+.vitalia-title-care,
+.vitalia-mailbox-header,
+.vitalia-section-title {
+  color: var(--stimeo-gold) !important;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Vitalia card styling - clean, no overlay */
+.vitalia-card-engagement {
+  background: #ffffff !important;
+  border: 1px solid transparent;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.vitalia-card-engagement:hover {
+  transform: translateY(-5px);
+  border-color: var(--stimeo-gold);
+  box-shadow: 0 10px 30px rgba(177, 158, 49, 0.1);
+}
+
+/* Remove any overlay that blocks content */
+.vitalia-card-engagement .bordeaux-overlay {
+  display: none !important;
+}
+
+/* Vitalia icon styling - Now unified to STIMÉO Gold */
+.vitalia-icon-bordeaux {
+  color: var(--stimeo-gold) !important;
+  border-color: var(--stimeo-gold) !important;
+  stroke: var(--stimeo-gold) !important;
+}
+
+/* Vitalia buttons - Now unified to STIMÉO Gold */
+.vitalia-btn-primary {
+  background-color: var(--stimeo-gold) !important;
+  border-color: var(--stimeo-gold) !important;
+  color: white !important;
+}
+
+.vitalia-btn-primary:hover {
+  opacity: 0.9;
+  box-shadow: 0 4px 12px rgba(177, 158, 49, 0.3);
+}
+
+/* --- STIMÉO IDENTITY (Technical & Teleobservance) --- */
+.stimeo-teleobservance-line,
+.stimeo-check-icon,
+.stimeo-accent {
+  background-color: var(--stimeo-gold) !important;
+  border-color: var(--stimeo-gold) !important;
+  color: var(--stimeo-gold) !important;
+  stroke: var(--stimeo-gold) !important;
+}
+
+/* Stiméo Connect Section */
+.vitalia-stimeo-label {
+  color: var(--stimeo-gold) !important;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.vitalia-stimeo-btn {
+  background-color: var(--stimeo-gold) !important;
+  border-radius: 8px;
+  color: #ffffff !important;
+  transition: all 0.3s ease;
+}
+
+.vitalia-stimeo-btn:hover {
+  opacity: 0.9;
+  box-shadow: 0 4px 12px rgba(177, 158, 49, 0.3);
+}
+
+.vitalia-check-gold {
+  color: var(--stimeo-gold) !important;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+/* --- Vision Button Override (Stiméo Gold) --- */
+.vitalia-btn-vision {
+  background-color: #B19E31 !important;
+  color: #ffffff !important;
+  border-radius: 50px !important;
+  padding: 14px 32px;
+  font-weight: 700;
+  text-transform: none;
+  transition: all 0.3s ease;
+  border: #B19E31 !important;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.vitalia-btn-vision:hover {
+  background-color: #a88d29 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(177, 158, 49, 0.3);
+}
+
+.vitalia-btn-vision:active {
+  background-color: #9a7e24 !important;
+  transform: translateY(0);
+}
+
+/* Stiméo section styling */
+.stimeo-section {
+  border-left: 4px solid var(--stimeo-gold);
+}
+
+.stimeo-title {
+  color: var(--stimeo-gold) !important;
+  font-weight: 800;
+}
+
+/* Stiméo accent lines and decorative elements */
+.stimeo-accent-bar {
+  background: linear-gradient(90deg, var(--stimeo-gold) 0%, rgba(177, 158, 49, 0.3) 100%);
+  height: 3px;
+  border-radius: 2px;
+}
+
+/* --- Final CTA Banner (Stiméo Gold) --- */
+.vitalia-footer-cta {
+  background-color: var(--stimeo-gold) !important;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.vitalia-footer-cta h2 {
+  color: #ffffff !important;
+  font-size: 28px;
+  margin-bottom: 24px;
+}
+
+.vitalia-btn-white {
+  background-color: #ffffff !important;
+  color: #1f2937 !important;
+  padding: 12px 32px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.vitalia-btn-white:hover {
+  background-color: #f3f4f6 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* --- PWA PROFILE VIEW --- */
+.vitalia-pwa-profil-view {
+  padding-bottom: 120px !important;
+}
+
+/* --- CLEAN ENGAGEMENT CARDS (Lightweight Glassmorphism) --- */
+.engagement-card-clean {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px;
+  border-top: 3px solid var(--stimeo-gold) !important;
+  border: 1px solid transparent;
+  border-top: 3px solid var(--stimeo-gold) !important;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+}
+
+.engagement-card-clean:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(177, 158, 49, 0.1);
+}
+
+/* Icon animation on card hover */
+.engagement-card-clean:hover svg {
+  animation: iconScaleHover 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes iconScaleHover {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  100% {
+    transform: scale(1.1) rotate(5deg);
+  }
+}
+
+/* --- STAGGERED ANIMATIONS --- */
+.stagger-fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.stagger-fade-in:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.stagger-fade-in:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.stagger-fade-in:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.stagger-fade-in:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+/* ============================================
+   STIMÉO GOLD UI PRIORITY - GLOBAL OVERRIDES
+   ============================================ */
+
+/* --- STIMÉO Gold Primary Buttons --- */
+.stimeo-primary-btn,
+.vitalia-stimeo-btn {
+  background-color: #B19E31 !important;
+  color: #ffffff !important;
+  border-color: #B19E31 !important;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.stimeo-primary-btn:hover,
+.vitalia-stimeo-btn:hover {
+  background-color: #a88d29 !important;
+  opacity: 0.9;
+  box-shadow: 0 4px 15px rgba(177, 158, 49, 0.3);
+  transform: translateY(-2px);
+}
+
+/* --- STIMÉO Check Icons & Validation --- */
+.stimeo-check-icon,
+.vitalia-check-gold {
+  color: #B19E31 !important;
+  stroke: #B19E31 !important;
+  background-color: transparent;
+}
+
+/* --- STIMÉO Accent Lines & Structural Elements --- */
+.stimeo-accent-line,
+.stimeo-accent-bar,
+.stimeo-title-underline {
+  background-color: #B19E31 !important;
+  border-color: #B19E31 !important;
+}
+
+/* --- STIMÉO Text Highlights --- */
+.stimeo-text-highlight,
+.stimeo-label-text {
+  color: #B19E31 !important;
+  font-weight: 700;
+}
+
+/* --- BORDEAUX VITALIA - Coordination Elements --- */
+.vitalia-title-main,
+.vitalia-title-coordination {
+  color: #B19E31 !important;
+  font-weight: 800;
+}
+
+.vitalia-mailbox-title,
+.vitalia-messaging-header {
+  color: #B19E31 !important;
+  font-weight: 700;
+}
+
+.vitalia-nav-rdv-btn {
+  color: #B19E31 !important;
+  border-color: #B19E31 !important;
+}
+
+.vitalia-nav-rdv-btn:hover {
+  background-color: rgba(177, 158, 49, 0.05);
+}
+
+/* --- Clean Card Styling (Unified) --- */
+.vitalia-card-clean {
+  background: #ffffff !important;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.vitalia-card-clean:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 10px 30px rgba(153, 85, 78, 0.1);
+}
+
+/* --- STIMÉO Section Headers --- */
+.stimeo-section-title {
+  color: #B19E31 !important;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* --- UNIFIED VITALIA Section Headers (Now STIMÉO Gold) --- */
+.vitalia-section-title {
+  color: #B19E31 !important;
+  font-weight: 800;
+}
+
+/* --- Final CTA Banner (STIMÉO) --- */
+.vitalia-footer-cta {
+  background-color: #B19E31 !important;
+}
+
+.vitalia-footer-cta h2,
+.vitalia-footer-cta h3 {
+  color: #ffffff !important;
+}
+
+.vitalia-btn-white {
+  background-color: #ffffff !important;
+  color: #1f2937 !important;
+}
+
+.vitalia-btn-white:hover {
+  background-color: #f3f4f6 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* --- PWA Mobile Ergonomics --- */
+.vitalia-pwa-profil-view {
+  padding-bottom: 120px !important;
+}
+
+/* === STIMÉO Gold Badge Pulse === */
+.vitalia-badge-pulse {
+  background-color: var(--stimeo-gold) !important;
+  animation: pulse-gold 2s infinite;
+  border: 2px solid #FFFFFF;
+}
+
+/* ============================================
+   MOBILE CAROUSEL: SWIPE, SNAP & BOUNCE
+   ============================================ */
+
+/* --- Mobile Carousel Container --- */
+.vitalia-swipe-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  gap: 16px;
+  padding: 20px;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+.vitalia-swipe-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* --- Carousel Item Snap --- */
+.vitalia-swipe-item {
+  flex: 0 0 85%;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+
+/* --- Bounce Animation (Overscroll Effect) --- */
+.vitalia-bounce-end {
+  animation: bounceRight 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+@keyframes bounceRight {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-15px);
+  }
+  50% {
+    transform: translateX(-20px);
+  }
+  75% {
+    transform: translateX(-8px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* --- Pagination Dots (Gold STIMÉO) --- */
+.vitalia-carousel-dots {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 16px;
+  padding: 0 20px;
+}
+
+.vitalia-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #d1d5db;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: pointer;
+}
+
+.vitalia-dot.vitalia-dot-active {
+  background-color: var(--stimeo-gold) !important;
+  width: 24px;
+  border-radius: 4px;
+  box-shadow: 0 0 12px rgba(177, 158, 49, 0.4);
+}
+
+.vitalia-dot:hover:not(.vitalia-dot-active) {
+  background-color: #9ca3af;
+  transform: scale(1.2);
+}
+
+/* --- Messaging & Mailbox (Unified to STIMÉO Gold) --- */
+.vitalia-mailbox-container {
+  border: 1px solid rgba(177, 158, 49, 0.2);
+  border-radius: 8px;
+}
+
+.vitalia-mailbox-header {
+  color: var(--stimeo-gold) !important;
+  border-bottom: 2px solid rgba(177, 158, 49, 0.1);
+}
+
+.vitalia-message-user {
+  background-color: var(--stimeo-gold) !important;
+  color: #ffffff !important;
+}
+
+.vitalia-message-practitioner {
+  background-color: #f3f4f6;
+  color: #1f2937;
+}
+
+/* --- Tab Bar Styling (Mobile) - Now STIMÉO Gold --- */
+.vitalia-tab-active {
+  color: var(--stimeo-gold) !important;
+  border-bottom: 2px solid var(--stimeo-gold) !important;
+}
+
+.vitalia-tab-badge {
+  background-color: var(--stimeo-gold);
+  color: #ffffff;
+  animation: pulse-gold 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* === STIMÉO Gold Pulse Animation === */
+@keyframes pulse-gold {
+  0% {
+    box-shadow: 0 0 0 0 rgba(177, 158, 49, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(177, 158, 49, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(177, 158, 49, 0);
+  }
+}
+
+/* ============================================
+   ACCORDION SYSTEM - GLOBAL SUPPORT
+   ============================================ */
+
+/* Ensure cards expand properly */
+.vitalia-card-expandable {
+  position: relative;
+  width: 100%;
+}
+
+/* Smooth height transitions for accordion bodies */
+.vitalia-card-body {
+  display: block;
+}
+
+/* Glow animation when card expands */
+@keyframes glowAppear {
+  0% {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  }
+  100% {
+    box-shadow: 0 0 25px rgba(177, 158, 49, 0.25), 0 10px 30px rgba(0, 0, 0, 0.05);
+  }
+}
+
+.is-expanded {
+  animation: glowAppear 0.4s ease-out forwards;
+}
+
+/* ============================================
+   SPLIT-SCREEN LAYOUT: Institutional Pages
+   ============================================ */
+
+/* --- Article Block Styling --- */
+.legal-article-block {
+  margin-bottom: 60px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.legal-article-block:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* --- Article Titles --- */
+.legal-article-title {
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 36px;
+  color: #1f2937;
+  margin-bottom: 24px;
+  margin-top: 0;
+}
+
+/* --- Article Paragraph --- */
+.legal-article-paragraph {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #4b5563;
+  margin-bottom: 16px;
+}
+
+/* --- Data List (Label: Value pairs) --- */
+.legal-data-list {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  space-y: 12px;
+}
+
+.legal-data-item {
+  font-size: 16px;
+  line-height: 24px;
+  color: #374151;
+  margin-bottom: 12px;
+}
+
+.legal-data-label {
+  font-weight: 700;
+  color: #1f2937;
+}
+
+/* --- Mobile Carousel: Equal Card Heights --- */
+@media (max-width: 768px) {
+  /* Engagement carousel items */
+  .engagement-carousel-mobile .vitalia-card-expandable {
+    min-height: 160px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Role carousel items */
+  .role-carousel-mobile .vitalia-card-expandable {
+    min-height: 160px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Prevent body from expanding card height */
+  .engagement-carousel-mobile .vitalia-card-body,
+  .role-carousel-mobile .vitalia-card-body {
+    overflow: hidden;
+  }
+}
