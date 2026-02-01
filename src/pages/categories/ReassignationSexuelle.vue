@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
-import CheckIcon from '../components/icons/CheckIcon.vue'
-import { useTitleAnimations } from '../composables/useTitleAnimations'
+import CheckIcon from '../../components/icons/CheckIcon.vue'
+import { useTitleAnimations } from '../../composables/useTitleAnimations.ts'
 
 const router = useRouter()
 useTitleAnimations()

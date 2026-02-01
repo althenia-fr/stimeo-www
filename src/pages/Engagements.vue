@@ -105,7 +105,9 @@ useTitleAnimations()
                <div class="space-y-4">
                   <div class="border-l-4 border-brand-gold pl-4">
                      <h4 class="font-bold text-brand-anthracite text-lg mb-1">Autonomie au quotidien</h4>
-                     <p class="text-brand-neutral text-sm">Des dispositifs qui s'adaptent à la vie du patient, et non l'inverse.</p>
+                     <p class="text-brand-neutral text-sm">
+                       Des dispositifs qui s'adaptent à la vie du patient, et non l'inverse.
+                     </p>
                   </div>
                   <div class="border-l-4 border-brand-gold pl-4">
                      <h4 class="font-bold text-brand-anthracite text-lg mb-1">Sécurité renforcée</h4>

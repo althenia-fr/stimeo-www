@@ -59,7 +59,7 @@ const slides = [
   {
     label: 'Expertise Majeure',
     title: 'Neuro-stimulation (TENS)',
-    description: 'Soulagement des douleurs chroniques grâce à la technologie TENS. Installation et suivi par des IDEL formés.',
+    description: 'La Neurostimulation Électrique Transcutanée (TENS) est une méthode validée pour le traitement des douleurs chroniques ainsi que des troubles vésico-sphinctériens d’origine neurologique ou idiopathique. Nous vous accompagnons dans la prise en main de votre protocole de soin.',
     points: [
       {
         title: 'Soulagement Prouvé',

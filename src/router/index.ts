@@ -3,13 +3,13 @@ import Home from '../pages/Home.vue'
 import EcosystemeConnecte from '../pages/EcosystemeConnecte.vue'
 import HorizonsStimeo from '../pages/HorizonsStimeo.vue'
 import Engagements from '../pages/Engagements.vue'
-import ReassinationSexuelle from '../pages/ReassinationSexuelle.vue'
 import Idel from '../pages/Idel.vue'
 import PatientPortal from '../pages/PatientPortal.vue'
 import Urologie from '../pages/categories/Urologie.vue'
 import Stomatherapie from '../pages/categories/Stomatherapie.vue'
 import Cicatrisation from '../pages/categories/Cicatrisation.vue'
 import Neurostimulation from '../pages/categories/Neurostimulation.vue'
+import ReassignationSexuelle from '../pages/categories/ReassignationSexuelle.vue'
 import Contact from '../pages/Contact.vue'
 import MentionsLegales from '../pages/MentionsLegales.vue'
 import NotFound from '../pages/NotFound.vue'
@@ -47,8 +47,8 @@ const routes = [
   },
   {
     path: '/reassignation-sexuelle',
-    name: 'ReassinationSexuelle',
-    component: ReassinationSexuelle,
+    name: 'ReassignationSexuelle',
+    component: ReassignationSexuelle,
   },
   {
     path: '/categories/urologie',
