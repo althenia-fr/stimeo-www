@@ -15,28 +15,28 @@ const engagementCards = [
     id: 'conformite',
     title: 'La sérénité juridique au service de la sécurité patient.',
     shortDescription: 'Garantissez la pérennité de votre activité grâce à un accès transparent aux dispositifs médicaux, en totale adéquation avec les normes du Code de la Santé Publique.',
-    fullDescription: 'Nous assurons une veille permanente et des <b>audits de conformité réguliers</b> pour garantir un respect strict du <b>Code de la Santé Publique</b> et des dernières évolutions législatives. Chaque dispositif médical déployé fait l\'objet d\'une <b>documentation transparente</b> et d\'une traçabilité complète, assurant ainsi une sécurité juridique et technique optimale pour tous les acteurs. Notre expertise en conseil réglementaire offre à nos partenaires un <b>support juridique dédié</b> pour sécuriser chaque étape du parcours de soin à domicile.',
+    fullDescription: 'Nous assurons une veille permanente et des audits de conformité réguliers pour garantir un respect strict du Code de la Santé Publique et des dernières évolutions législatives. Chaque dispositif médical déployé fait l\'objet d\'une documentation transparente et d\'une traçabilité complète, assurant ainsi une sécurité juridique et technique optimale pour tous les acteurs. Notre expertise en conseil réglementaire offre à nos partenaires un support juridique dédié pour sécuriser chaque étape du parcours de soin à domicile.',
     icon: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'
   },
   {
     id: 'ethique',
     title: 'Placer l\'humain au sommet de nos exigences.',
     shortDescription: 'Exercez en toute sérénité avec un partenaire engagé qui refuse toute pratique non conforme, plaçant la déontologie au cœur de chaque prise en charge.',
-    fullDescription: 'Notre engagement repose sur une <strong>charte éthique rigoureuse</strong>, co-signée par l\'ensemble de nos partenaires, pour garantir une <strong>intégrité absolue</strong> dans chaque prise en charge. Nous plaçons le respect de la <strong>dignité</strong> et des droits fondamentaux du patient au cœur de nos priorités, en refusant systématiquement toute pratique non conforme aux plus hauts standards de soin. Cette culture de la <strong>transparence</strong> guide l\'intégralité de nos échanges pour bâtir une relation de confiance durable et sincère avec le patient et sa famille.',
+    fullDescription: 'Notre engagement repose sur une charte éthique rigoureuse, co-signée par l\'ensemble de nos partenaires, pour garantir une intégrité absolue dans chaque prise en charge. Nous plaçons le respect de la dignité et des droits fondamentaux du patient au cœur de nos priorités, en refusant systématiquement toute pratique non conforme aux plus hauts standards de soin. Cette culture de la transparence guide l\'intégralité de nos échanges pour bâtir une relation de confiance durable et sincère avec le patient et sa famille.',
     icon: 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z'
   },
   {
     id: 'innovation',
     title: 'L\'innovation digitale au service d\'un pilotage de précision',
     shortDescription: 'Optimisez votre suivi clinique avec la plateforme Stiméo Connect : un accès gratuit à des données de télé-observance précises pour une coordination simplifiée.',
-    fullDescription: '<p>Grâce à notre plateforme <strong>STIMÉO Connect</strong>, nous transformons le suivi patient en intégrant une <strong>télé-observance interactive</strong> et des données exploitables en temps réel pour un pilotage de précision. Cette coordination digitale simplifiée, accessible sans frais, nous permet de déployer des <strong>innovations continues</strong> spécifiquement conçues pour maximiser l\'observance et la sécurité des soins au domicile. En unifiant technologie et expertise humaine, nous offrons aux prescripteurs des outils de pilotage performants pour une vision claire et immédiate du parcours de soin.</p>',
+    fullDescription: 'Grâce à notre plateforme STIMÉO Connect, nous transformons le suivi patient en intégrant une télé-observance interactive et des données exploitables en temps réel pour un pilotage de précision. Cette coordination digitale simplifiée, accessible sans frais, nous permet de déployer des innovations continues spécifiquement conçues pour maximiser l\'observance et la sécurité des soins au domicile. En unifiant technologie et expertise humaine, nous offrons aux prescripteurs des outils de pilotage performants pour une vision claire et immédiate du parcours de soin.',
     icon: 'M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z'
   },
   {
     id: 'expertise',
     title: 'L\'excellence technique par la transmission constante du savoir',
     shortDescription: 'Restez à la pointe de l\'innovation technique et humaine pour maîtriser les dispositifs de demain et perfectionner votre accompagnement au quotidien.',
-    fullDescription: '<p>Nous garantissons une expertise de pointe grâce à des programmes de <strong>formations continues</strong> sur l\'ensemble de nos dispositifs médicaux, portés par des ressources humaines expertes et toujours disponibles. Notre mission est d\'accompagner chaque soignant vers une <strong>maîtrise technique irréprochable</strong>, tout en favorisant le développement professionnel constant au sein de notre communauté. En rejoignant notre <strong>réseau de praticiens spécialisés</strong>, vous bénéficiez d\'un environnement de partage et d\'apprentissage conçu pour élever durablement les standards du soin technique.</p>',
+    fullDescription: 'Nous garantissons une expertise de pointe grâce à des programmes de formations continues sur l\'ensemble de nos dispositifs médicaux, portés par des ressources humaines expertes et toujours disponibles. Notre mission est d\'accompagner chaque soignant vers une maîtrise technique irréprochable, tout en favorisant le développement professionnel constant au sein de notre communauté. En rejoignant notre réseau de praticiens spécialisés, vous bénéficiez d\'un environnement de partage et d\'apprentissage conçu pour élever durablement les standards du soin technique.',
     icon: 'M12 6.253v13m0-13C6.5 6.253 2 10.998 2 17.25c0 5.25 3.75 7.5 10 7.5s10-2.25 10-7.5c0-6.252-4.5-11-10-11z'
   }
 ]

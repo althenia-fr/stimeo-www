@@ -49,7 +49,7 @@ useTitleAnimations()
               <div  class="lg:col-span-2">
                  <h2 class="font-extrabold text-3xl lg:text-4xl mb-4 animate-fade-in-up-enhanced" style="color: #2D2D2D">Efficacité <span class="text-brand-gold">Prouvée</span></h2>
                  <p class="text-base font-medium mb-8 leading-relaxed" style="color: #4A4A4A">
-                    La Neurostimulation Électrique Transcutanée (TENS) est une méthode validée pour le traitement des douleurs chroniques. Nous vous accompagnons dans la prise en main de votre appareil.
+                    La Neurostimulation Électrique Transcutanée (TENS) est une méthode validée pour le traitement des douleurs chroniques ainsi que des troubles vésico-sphinctériens. Nous vous accompagnons dans la prise en main de votre appareil.
                  </p>
 
                  <ul class="grid grid-cols-1 gap-4 mb-8">
@@ -101,7 +101,7 @@ useTitleAnimations()
             <!-- Sticky Contact -->
             <div class="bg-white rounded-3xl p-6 shadow-lg sticky top-8">
               <h4 class="font-bold text-lg mb-3" style="color: #2D2D2D">Essayer la solution</h4>
-              <p class="text-sm mb-4" style="color: #4A4A4A">Demandez conseil à nos spécialistes douleur</p>
+              <p class="text-sm mb-4" style="color: #4A4A4A">Demandez conseil à nos spécialistes</p>
               <button @click="router.push('/contact')" class="btn-primary w-full justify-center flex text-sm">
                 Nous contacter
               </button>
